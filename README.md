@@ -1,5 +1,16 @@
 # Retail RAG Project Developer Documentation
 
+
+## Setup
+
+### Launching vLLM
+
+To launch vLLM with the specified model, use the following command:
+```
+vllm serve meta-llama/Llama-3.1-8B-Instruct --dtype auto --max-model-len 4096
+```
+
+
 ## Overview
 
 This project consists of several Python scripts designed to process, clean, and analyze retail data. The main components are:
