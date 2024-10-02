@@ -24,8 +24,7 @@ def preprocess_text(text: str) -> str:
     Remove lines that start with a name and date from the Work Order Internal Note.
     """
     # Example patterns:
-    # (2021-11-15) Killian
-    # Killian McAteer (7/12/2021 17:31:16)
+    # (2021-11-15) Mathieu Gosbee Mathieu Gosbee (7/12/2021 17:31:16)
     # Rémy Dunoyer (18/12/2021 18:16:23)
     pattern = r"^(?:\(\d{4}-\d{2}-\d{2}\)\s+\w+|\w+\s+\w+\s+\(\d{1,2}/\d{1,2}/\d{4}\s+\d{2}:\d{2}:\d{2}\))\s*"
     cleaned = re.sub(pattern, '', text, flags=re.MULTILINE)
@@ -856,7 +855,7 @@ def process_note(note: str) -> Optional[dict]:
         "{\n  \"cleaned_text\": \"attempt to fix shifter case\",\n  \"author\": \"Mathieu Gosbee\",\n  \"date\": \"6/10/2021 12:03:53\"\n}\n\n"
         "Example Original Note:\n"
         "```\n"
-        "Killian McAteer (16/12/2021 18:23:10)\n"
+        "Mathieu Gosbee (16/12/2021 18:23:10)\n"
         "CX bought a brake lever from us and is now loose.\n"
         "Take a deeper look at the front wheel too.\n"
         "```\n"

@@ -1,0 +1,8 @@
+# Ignore all .pkl, .xlsx, .csv, and .png files
+*.pkl
+*.xlsx
+*.csv
+*.png
+*.pth
+*.parquet
+__pycache__
